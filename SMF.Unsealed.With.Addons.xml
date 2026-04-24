@@ -1,0 +1,602 @@
+<ManagementPack ContentReadable="true" SchemaVersion="2.0" OriginalSchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <Manifest>
+    <Identity>
+      <ID>SMF.Unsealed.With.Addons</ID>
+      <Version>1.0.0.3</Version>
+    </Identity>
+    <Name>SMF.Unsealed.With.Addons</Name>
+    <References>
+      <Reference Alias="MicrosoftSystemCenterInternal7084486">
+        <ID>Microsoft.SystemCenter.Internal</ID>
+        <Version>7.0.8448.6</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="SMFLibrary">
+        <ID>Standard.Monitoring.Framework.Library</ID>
+        <Version>12.0.7.0</Version>
+        <PublicKeyToken>830a37d75feb592c</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MicrosoftSystemCenterHtmlDashboardLibrary1019106490">
+        <ID>Microsoft.SystemCenter.HtmlDashboard.Library</ID>
+        <Version>10.19.10649.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="SMFWindowsLibrary">
+        <ID>Standard.Monitoring.Framework.Windows.Library</ID>
+        <Version>12.0.7.0</Version>
+        <PublicKeyToken>830a37d75feb592c</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MicrosoftWindows2016ClusterManagementMonitoring10100">
+        <ID>Microsoft.Windows.2016.Cluster.Management.Monitoring</ID>
+        <Version>10.1.0.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="StandardMonitoringFrameworkWindowsTasks12070">
+        <ID>Standard.Monitoring.Framework.Windows.Tasks</ID>
+        <Version>12.0.7.0</Version>
+        <PublicKeyToken>830a37d75feb592c</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MSDL">
+        <ID>Microsoft.SystemCenter.DataWarehouse.Library</ID>
+        <Version>10.19.10649.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MicrosoftSystemCenterWebApplicationSolutionsLibrary1019106490">
+        <ID>Microsoft.SystemCenter.WebApplicationSolutions.Library</ID>
+        <Version>10.19.10649.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MicrosoftSQLServerCoreWebDashboards7200">
+        <ID>Microsoft.SQLServer.Core.WebDashboards</ID>
+        <Version>7.2.0.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="SystemNetworkManagementLibrary1019100500">
+        <ID>System.NetworkManagement.Library</ID>
+        <Version>10.19.10050.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="Windows">
+        <ID>Microsoft.Windows.Library</ID>
+        <Version>7.5.8501.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MicrosoftSystemCenterOperationsManager20071019100500">
+        <ID>Microsoft.SystemCenter.OperationsManager.2007</ID>
+        <Version>10.19.10050.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MicrosoftSystemCenterOperationsManagerSummaryDashboard1019100500">
+        <ID>Microsoft.SystemCenter.OperationsManager.SummaryDashboard</ID>
+        <Version>10.19.10050.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MicrosoftUnixViews101910080">
+        <ID>Microsoft.Unix.Views</ID>
+        <Version>10.19.1008.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MicrosoftSQLServerCoreLibrary7200">
+        <ID>Microsoft.SQLServer.Core.Library</ID>
+        <Version>7.2.0.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="Perf">
+        <ID>System.Performance.Library</ID>
+        <Version>7.0.8443.6</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="SystemNetworkManagementMonitoring1019100500">
+        <ID>System.NetworkManagement.Monitoring</ID>
+        <Version>10.19.10050.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MicrosoftWindows2012R2ClusterManagementMonitoring10066">
+        <ID>Microsoft.Windows.2012.R2.Cluster.Management.Monitoring</ID>
+        <Version>10.0.6.6</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="SystemHealthInternal7084436">
+        <ID>System.Health.Internal</ID>
+        <Version>7.0.8443.6</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MicrosoftWindowsClientLibrary6067290">
+        <ID>Microsoft.Windows.Client.Library</ID>
+        <Version>6.0.6729.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="StandardMonitoringFrameworkWindowsMonitoring12070">
+        <ID>Standard.Monitoring.Framework.Windows.Monitoring</ID>
+        <Version>12.0.7.0</Version>
+        <PublicKeyToken>830a37d75feb592c</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MicrosoftSQLServerVisualizationLibrary7200">
+        <ID>Microsoft.SQLServer.Visualization.Library</ID>
+        <Version>7.2.0.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MicrosoftWindowsServerClusterSharedVolumeMonitoring10110">
+        <ID>Microsoft.Windows.Server.ClusterSharedVolumeMonitoring</ID>
+        <Version>10.1.1.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MicrosoftSystemCenterVisualizationNetworkDashboard1019100500">
+        <ID>Microsoft.SystemCenter.Visualization.Network.Dashboard</ID>
+        <Version>10.19.10050.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="OpsMgrSelfMaintenance3100">
+        <ID>OpsMgr.Self.Maintenance</ID>
+        <Version>3.1.0.0</Version>
+        <PublicKeyToken>c6e32e10468075ac</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MicrosoftSystemCenterOperationsManagerInternal1019106490">
+        <ID>Microsoft.SystemCenter.OperationsManager.Internal</ID>
+        <Version>10.19.10649.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MicrosoftSystemCenterAdvisor1019106490">
+        <ID>Microsoft.SystemCenter.Advisor</ID>
+        <Version>10.19.10649.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="InstanceGroupLibrary">
+        <ID>Microsoft.SystemCenter.InstanceGroup.Library</ID>
+        <Version>7.5.8501.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="StandardMonitoringFrameworkPresentation12070">
+        <ID>Standard.Monitoring.Framework.Presentation</ID>
+        <Version>12.0.7.0</Version>
+        <PublicKeyToken>830a37d75feb592c</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MicrosoftWindowsServerLibrary10110">
+        <ID>Microsoft.Windows.Server.Library</ID>
+        <Version>10.1.1.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MicrosoftWindowsServer2012Monitoring6073260">
+        <ID>Microsoft.Windows.Server.2012.Monitoring</ID>
+        <Version>6.0.7326.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MicrosoftSQLServerCoreViews7200">
+        <ID>Microsoft.SQLServer.Core.Views</ID>
+        <Version>7.2.0.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MicrosoftSQLServerGenericPresentation70150">
+        <ID>Microsoft.SQLServer.Generic.Presentation</ID>
+        <Version>7.0.15.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="System">
+        <ID>System.Library</ID>
+        <Version>7.5.8501.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MicrosoftWindowsServerHtml5Dashboard10110">
+        <ID>Microsoft.Windows.Server.Html5.Dashboard</ID>
+        <Version>10.1.1.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="StandardMonitoringFrameworkWindowsPresentation12070">
+        <ID>Standard.Monitoring.Framework.Windows.Presentation</ID>
+        <Version>12.0.7.0</Version>
+        <PublicKeyToken>830a37d75feb592c</PublicKeyToken>
+      </Reference>
+      <Reference Alias="SC">
+        <ID>Microsoft.SystemCenter.Library</ID>
+        <Version>7.0.8448.6</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MicrosoftWindowsServer2016Monitoring10110">
+        <ID>Microsoft.Windows.Server.2016.Monitoring</ID>
+        <Version>10.1.1.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MicrosoftUnixConsoleLibrary101910080">
+        <ID>Microsoft.Unix.ConsoleLibrary</ID>
+        <Version>10.19.1008.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MicrosoftSystemCenterOperationsManagerInfra1019106490">
+        <ID>Microsoft.SystemCenter.OperationsManager.Infra</ID>
+        <Version>10.19.10649.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="Health">
+        <ID>System.Health.Library</ID>
+        <Version>7.0.8443.6</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+    </References>
+  </Manifest>
+  <TypeDefinitions>
+    <MonitorTypes>
+      <UnitMonitorType ID="Standard.Monitoring.Framework.Windows.Service.CheckNTServiceStoppedStateWithSchedule.MonitorType" Accessibility="Public">
+        <MonitorTypeStates>
+          <MonitorTypeState ID="Healthy" NoDetection="false" />
+          <MonitorTypeState ID="Warning" NoDetection="false" />
+          <MonitorTypeState ID="Critical" NoDetection="false" />
+        </MonitorTypeStates>
+        <Configuration>
+          <xsd:element name="ComputerName" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element name="ServiceName" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element name="CheckStartupType" minOccurs="0" maxOccurs="1" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element name="ScheduleStartTime" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element name="ScheduleEndTime" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element name="ScheduleDays" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element name="MatchCount" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element name="Frequency" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element name="Severity" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+        </Configuration>
+        <OverrideableParameters>
+          <OverrideableParameter ID="CheckStartupType" Selector="$Config/CheckStartupType$" ParameterType="string" />
+          <OverrideableParameter ID="ScheduleStartTime" Selector="$Config/ScheduleStartTime$" ParameterType="string" />
+          <OverrideableParameter ID="ScheduleEndTime" Selector="$Config/ScheduleEndTime$" ParameterType="string" />
+          <OverrideableParameter ID="ScheduleDays" Selector="$Config/ScheduleDays$" ParameterType="int" />
+          <OverrideableParameter ID="Frequency" Selector="$Config/Frequency$" ParameterType="int" />
+          <OverrideableParameter ID="MatchCount" Selector="$Config/MatchCount$" ParameterType="int" />
+          <OverrideableParameter ID="Severity" Selector="$Config/Severity$" ParameterType="string" />
+        </OverrideableParameters>
+        <MonitorImplementation>
+          <MemberModules>
+            <DataSource ID="DS" TypeID="Windows!Microsoft.Windows.Win32ServiceInformationProvider">
+              <ComputerName>$Config/ComputerName$</ComputerName>
+              <ServiceName>$Config/ServiceName$</ServiceName>
+              <Frequency>$Config/Frequency$</Frequency>
+              <CheckStartupType>$Config/CheckStartupType$</CheckStartupType>
+            </DataSource>
+            <ProbeAction ID="Probe" TypeID="Windows!Microsoft.Windows.Win32ServiceInformationProbe">
+              <ComputerName>$Config/ComputerName$</ComputerName>
+              <ServiceName>$Config/ServiceName$</ServiceName>
+            </ProbeAction>
+            <ConditionDetection ID="ServiceUnhealthy" TypeID="System!System.ExpressionFilter">
+              <Expression>
+                <And>
+                  <Expression>
+                    <Or>
+                      <Expression>
+                        <And>
+                          <Expression>
+                            <SimpleExpression>
+                              <ValueExpression>
+                                <Value Type="String">$Config/CheckStartupType$</Value>
+                              </ValueExpression>
+                              <Operator>Equal</Operator>
+                              <ValueExpression>
+                                <Value Type="String">true</Value>
+                              </ValueExpression>
+                            </SimpleExpression>
+                          </Expression>
+                          <Expression>
+                            <SimpleExpression>
+                              <ValueExpression>
+                                <XPathQuery Type="Integer">Property[@Name='StartMode']</XPathQuery>
+                              </ValueExpression>
+                              <Operator>NotEqual</Operator>
+                              <ValueExpression>
+                                <Value Type="Integer">2</Value>
+                              </ValueExpression>
+                            </SimpleExpression>
+                          </Expression>
+                        </And>
+                      </Expression>
+                      <Expression>
+                        <SimpleExpression>
+                          <ValueExpression>
+                            <XPathQuery Type="Integer">Property[@Name='State']</XPathQuery>
+                          </ValueExpression>
+                          <Operator>Equal</Operator>
+                          <ValueExpression>
+                            <Value Type="Integer">4</Value>
+                          </ValueExpression>
+                        </SimpleExpression>
+                      </Expression>
+                    </Or>
+                  </Expression>
+                  <Expression>
+                    <SimpleExpression>
+                      <ValueExpression>
+                        <XPathQuery Type="Integer">Property[@Name='State']</XPathQuery>
+                      </ValueExpression>
+                      <Operator>Equal</Operator>
+                      <ValueExpression>
+                        <Value Type="Integer">4</Value>
+                      </ValueExpression>
+                    </SimpleExpression>
+                  </Expression>
+                </And>
+              </Expression>
+            </ConditionDetection>
+            <ConditionDetection ID="ServiceHealthy" TypeID="System!System.ExpressionFilter">
+              <Expression>
+                <And>
+                  <Expression>
+                    <Or>
+                      <Expression>
+                        <SimpleExpression>
+                          <ValueExpression>
+                            <XPathQuery Type="Integer">Property[@Name='StartMode']</XPathQuery>
+                          </ValueExpression>
+                          <Operator>NotEqual</Operator>
+                          <ValueExpression>
+                            <Value Type="Integer">2</Value>
+                          </ValueExpression>
+                        </SimpleExpression>
+                      </Expression>
+                      <!-- Start mode = 2-->
+                      <Expression>
+                        <SimpleExpression>
+                          <ValueExpression>
+                            <Value Type="String">$Config/CheckStartupType$</Value>
+                          </ValueExpression>
+                          <Operator>Equal</Operator>
+                          <ValueExpression>
+                            <Value Type="String">true</Value>
+                          </ValueExpression>
+                        </SimpleExpression>
+                      </Expression>
+                      <!-- Check Startup = false-->
+                    </Or>
+                  </Expression>
+                  <!-- Startmode = 2 or check start up = false-->
+                  <Expression>
+                    <SimpleExpression>
+                      <ValueExpression>
+                        <XPathQuery Type="Integer">Property[@Name='State']</XPathQuery>
+                      </ValueExpression>
+                      <Operator>Equal</Operator>
+                      <ValueExpression>
+                        <Value Type="Integer">1</Value>
+                      </ValueExpression>
+                    </SimpleExpression>
+                  </Expression>
+                  <!-- State <> 4-->
+                </And>
+              </Expression>
+              <SuppressionSettings>
+                <MatchCount>$Config/MatchCount$</MatchCount>
+              </SuppressionSettings>
+            </ConditionDetection>
+            <ConditionDetection ID="CDCritical" TypeID="System!System.ExpressionFilter">
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <Value Type="String">$Config/Severity$</Value>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="String">Critical</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+            </ConditionDetection>
+            <ConditionDetection ID="CDWarning" TypeID="System!System.ExpressionFilter">
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <Value Type="String">$Config/Severity$</Value>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="String">Warning</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+            </ConditionDetection>
+            <ConditionDetection ID="Filter" TypeID="System!System.SchedulerFilter">
+              <SchedulerFilter>
+                <ProcessDataMode>OnSchedule</ProcessDataMode>
+                <Schedule>
+                  <WeeklySchedule>
+                    <Windows>
+                      <Daily>
+                        <Start>$Config/ScheduleStartTime$</Start>
+                        <End>$Config/ScheduleEndTime$</End>
+                        <DaysOfWeekMask>$Config/ScheduleDays$</DaysOfWeekMask>
+                      </Daily>
+                    </Windows>
+                  </WeeklySchedule>
+                  <ExcludeDates />
+                </Schedule>
+                <UseCurrentTime>true</UseCurrentTime>
+              </SchedulerFilter>
+            </ConditionDetection>
+          </MemberModules>
+          <RegularDetections>
+            <RegularDetection MonitorTypeStateID="Healthy">
+              <Node ID="ServiceHealthy">
+                <Node ID="DS" />
+              </Node>
+            </RegularDetection>
+            <RegularDetection MonitorTypeStateID="Critical">
+              <Node ID="CDCritical">
+                <Node ID="ServiceUnhealthy">
+                  <Node ID="Filter">
+                    <Node ID="DS" />
+                  </Node>
+                </Node>
+              </Node>
+            </RegularDetection>
+            <RegularDetection MonitorTypeStateID="Warning">
+              <Node ID="CDWarning">
+                <Node ID="ServiceUnhealthy">
+                  <Node ID="Filter">
+                    <Node ID="DS" />
+                  </Node>
+                </Node>
+              </Node>
+            </RegularDetection>
+          </RegularDetections>
+          <OnDemandDetections>
+            <OnDemandDetection MonitorTypeStateID="Healthy">
+              <Node ID="ServiceHealthy">
+                <Node ID="Probe" />
+              </Node>
+            </OnDemandDetection>
+            <OnDemandDetection MonitorTypeStateID="Critical">
+              <Node ID="CDCritical">
+                <Node ID="ServiceUnhealthy">
+                  <Node ID="Probe" />
+                </Node>
+              </Node>
+            </OnDemandDetection>
+            <OnDemandDetection MonitorTypeStateID="Warning">
+              <Node ID="CDWarning">
+                <Node ID="ServiceUnhealthy">
+                  <Node ID="Probe" />
+                </Node>
+              </Node>
+            </OnDemandDetection>
+          </OnDemandDetections>
+        </MonitorImplementation>
+      </UnitMonitorType>
+    </MonitorTypes>
+  </TypeDefinitions>
+  <Monitoring>
+    <Tasks>
+      <Task ID="Standard.Monitoring.Framework.Windows.AddWindowsServiceStart.AgentTask" Accessibility="Internal" Enabled="true" Target="Windows!Microsoft.Windows.Computer" Timeout="300" Remotable="true" CanSuspend="false" CanCancel="false">
+        <Category>Maintenance</Category>
+        <WriteAction ID="WA" TypeID="SMFWindowsLibrary!Standard.Monitoring.Framework.Windows.AddWindowsService.WriteAction">
+          <ServiceDisplayName>ENTER WINDOWS SERVICE DISPLAYNAME</ServiceDisplayName>
+          <ServiceName>ENTER SERVICE SERVICENAME</ServiceName>
+          <CheckStartupType>TRUE</CheckStartupType>
+          <AutoRestart>FALSE</AutoRestart>
+          <MaxRestarts>3</MaxRestarts>
+          <RestartPeriod>60</RestartPeriod>
+          <BusinessService>ENTER NAME OF BUSINESS SERVICE</BusinessService>
+          <Environment>ENTER ENVIRONMENT</Environment>
+          <Team>ENTER BUSINESS SERVICE TEAM</Team>
+          <Frequency>60</Frequency>
+          <MatchCount>1</MatchCount>
+          <ScheduleDays>127</ScheduleDays>
+          <ScheduleEndTime>23:59</ScheduleEndTime>
+          <ScheduleStartTime>00:00</ScheduleStartTime>
+          <ComponentName>ENTER COMPONENT NAME</ComponentName>
+          <Documentation>ENTER LINK FOR DOCUMENTAION</Documentation>
+          <Description>ENTER DESCRIPTION</Description>
+          <Severity>Critical</Severity>
+          <Priority>Medium</Priority>
+          <ObjectTeam>ENTER OBJECT TEAM</ObjectTeam>
+        </WriteAction>
+      </Task>
+    </Tasks>
+    <Monitors>
+      <UnitMonitor ID="Standard.Monitoring.Framework.Windows.ServiceStopped.UnitMonitor" Accessibility="Public" Enabled="true" Target="SMFWindowsLibrary!Standard.Monitoring.Framework.Windows.Service" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="Standard.Monitoring.Framework.Windows.Service.CheckNTServiceStoppedStateWithSchedule.MonitorType" ConfirmDelivery="false">
+        <Category>AvailabilityHealth</Category>
+        <AlertSettings AlertMessage="Standard.Monitoring.Framework.Windows.ServiceStopped.UnitMonitor.AlertMessage">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Target/Property[Type="System!System.Entity"]/DisplayName$</AlertParameter1>
+            <AlertParameter2>$Target/Property[Type="SMFWindowsLibrary!Standard.Monitoring.Framework.Windows.Service"]/ServiceName$</AlertParameter2>
+            <AlertParameter3>$Target/Host/Property[Type="Windows!Microsoft.Windows.Computer"]/PrincipalName$</AlertParameter3>
+            <AlertParameter4>$Target/Property[Type="SMFLibrary!Standard.Monitoring.Framework.MonitoredObject"]/Description$</AlertParameter4>
+            <AlertParameter5>$Target/Property[Type="SMFLibrary!Standard.Monitoring.Framework.MonitoredObject"]/Documentation$</AlertParameter5>
+            <AlertParameter6>$Target/Property[Type="SMFLibrary!Standard.Monitoring.Framework.MonitoredObject"]/BusinessService$</AlertParameter6>
+            <AlertParameter7>$Target/Property[Type="SMFLibrary!Standard.Monitoring.Framework.MonitoredObject"]/Team$</AlertParameter7>
+            <AlertParameter8>$Target/Property[Type="SMFLibrary!Standard.Monitoring.Framework.MonitoredObject"]/Environment$</AlertParameter8>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="Healthy" MonitorTypeStateID="Healthy" HealthState="Success" />
+          <OperationalState ID="Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="Critical" MonitorTypeStateID="Critical" HealthState="Error" />
+        </OperationalStates>
+        <Configuration>
+          <ComputerName>$Target/Host/Property[Type="Windows!Microsoft.Windows.Computer"]/PrincipalName$</ComputerName>
+          <ServiceName>$Target/Property[Type="SMFWindowsLibrary!Standard.Monitoring.Framework.Windows.Service"]/ServiceName$</ServiceName>
+          <CheckStartupType>$Target/Property[Type="SMFWindowsLibrary!Standard.Monitoring.Framework.Windows.Service"]/CheckStartupType$</CheckStartupType>
+          <ScheduleStartTime>$Target/Property[Type="SMFLibrary!Standard.Monitoring.Framework.MonitoredObject"]/ScheduleStartTime$</ScheduleStartTime>
+          <ScheduleEndTime>$Target/Property[Type="SMFLibrary!Standard.Monitoring.Framework.MonitoredObject"]/ScheduleEndTime$</ScheduleEndTime>
+          <ScheduleDays>$Target/Property[Type="SMFLibrary!Standard.Monitoring.Framework.MonitoredObject"]/ScheduleDays$</ScheduleDays>
+          <MatchCount>$Target/Property[Type="SMFLibrary!Standard.Monitoring.Framework.MonitoredObject"]/MatchCount$</MatchCount>
+          <Frequency>$Target/Property[Type="SMFLibrary!Standard.Monitoring.Framework.MonitoredObject"]/Frequency$</Frequency>
+          <Severity>$Target/Property[Type="SMFLibrary!Standard.Monitoring.Framework.MonitoredObject"]/Severity$</Severity>
+        </Configuration>
+      </UnitMonitor>
+    </Monitors>
+    <Overrides>
+      <MonitorPropertyOverride ID="Aliase4623c04fdee4ebf99c9c1cf5765a07aOverrideForMonitorStandardMonitoringFrameworkWindowsServiceStoppedUnitMonitorForContextStandardMonitoringFrameworkWindowsService" Context="SMFWindowsLibrary!Standard.Monitoring.Framework.Windows.Service" Enforced="false" Monitor="Standard.Monitoring.Framework.Windows.ServiceStopped.UnitMonitor" Property="Enabled">
+        <Value>false</Value>
+      </MonitorPropertyOverride>
+      <MonitorPropertyOverride ID="Aliasbf7d2f9cf73b43f5b5057bf14c0ca6a0OverrideForMonitorStandardMonitoringFrameworkWindowsServiceStoppedUnitMonitorForContextStandardMonitoringFrameworkWindowsService" Context="SMFWindowsLibrary!Standard.Monitoring.Framework.Windows.Service" ContextInstance="828ef37f-c2fc-829b-a1b3-f147400d1228" Enforced="true" Monitor="Standard.Monitoring.Framework.Windows.ServiceStopped.UnitMonitor" Property="Enabled">
+        <Value>true</Value>
+      </MonitorPropertyOverride>
+    </Overrides>
+  </Monitoring>
+  <Presentation>
+    <StringResources>
+      <StringResource ID="Standard.Monitoring.Framework.Windows.ServiceStopped.UnitMonitor.AlertMessage" />
+    </StringResources>
+  </Presentation>
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+        <DisplayString ElementID="Standard.Monitoring.Framework.Windows.ServiceStopped.UnitMonitor" SubElementID="Healthy">
+          <Name>Healthy</Name>
+          <Description>The monitored service is stopped.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Standard.Monitoring.Framework.Windows.ServiceStopped.UnitMonitor" SubElementID="Warning">
+          <Name>Warning</Name>
+          <Description>Warning</Description>
+        </DisplayString>
+        <DisplayString ElementID="Standard.Monitoring.Framework.Windows.ServiceStopped.UnitMonitor" SubElementID="Critical">
+          <Name>Critical</Name>
+          <Description>The monitored service has started.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Standard.Monitoring.Framework.Windows.ServiceStopped.UnitMonitor">
+          <Name>Service State Started</Name>
+          <Description>Check if Windows Service is stopped. Raises an alert if it starts</Description>
+        </DisplayString>
+        <DisplayString ElementID="Standard.Monitoring.Framework.Windows.ServiceStopped.UnitMonitor.AlertMessage">
+          <Name>Windows Service Started</Name>
+          <Description>{0} ({1}) has failed on {2}
+						{3}
+						Support Details:
+						Documentation: {4}
+						Business Service: {5}
+						Team: {6}
+						Environment: {7}</Description>
+        </DisplayString>
+        <DisplayString ElementID="Standard.Monitoring.Framework.Windows.AddWindowsServiceStart.AgentTask">
+          <Name>SMF: Add Service Stopped Monitor</Name>
+          <Description>Add a monitor to check if a service has started. DO NOT USE for monitoring a service that should be running. 
+		  
+		  Kontakta teknisk ansvarig SCOM för att aktivera på för servern. 
+</Description>
+        </DisplayString>
+      </DisplayStrings>
+      <KnowledgeArticles>
+        <KnowledgeArticle ElementID="Standard.Monitoring.Framework.Windows.ServiceStopped.UnitMonitor" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Service State Stopped</maml:title>
+              <maml:para>
+                <maml:ui>Description</maml:ui>
+              </maml:para>
+              <maml:para>Monitor a windows service that should be stopped. Raises an alert if started</maml:para>
+              <maml:para>
+                <maml:ui>Configuration</maml:ui>
+              </maml:para>
+              <maml:para>
+                Disabled by default on serviceclass - Kontakta Teknisk Ansvarig SCOM för att slå på monitorn på servermn i fråga efter den är uppsatt i regedit med "SMF: Add Service Stopped Monitor"
+              </maml:para>
+              <maml:para>To make changes to the configuration of the rule. Please update HKLM:\\Software\SMF\ on the targeted Windows Computer.</maml:para>
+              <maml:para>
+                More documentation and the latest version can be found on GitHub -<maml:navigationLink><maml:linkText>https://github.com/KeithRochester/Standard-Monitoring-Framework</maml:linkText><maml:uri href="https://github.com/KeithRochester/Standard-Monitoring-Framework." /></maml:navigationLink>. 
+              </maml:para>
+              <maml:para>
+                If you have any questions or suggestions, please send me a message<maml:navigationLink><maml:linkText>keith.rochester@unit92.com</maml:linkText><maml:uri href="mailto:keith.rochester@unit92.com?subject=Standard%20Monitoring%20Framework" /></maml:navigationLink></maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+      </KnowledgeArticles>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPack>
