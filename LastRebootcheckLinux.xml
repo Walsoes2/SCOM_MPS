@@ -1,0 +1,161 @@
+<ManagementPack ContentReadable="true" SchemaVersion="2.0" OriginalSchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <Manifest>
+    <Identity>
+      <ID>Regua.LastReboot.Linux</ID>
+      <Version>1.0.0.38</Version>
+    </Identity>
+    <Name>Regua.LastReboot.Linux2</Name>
+    <References>
+      <Reference Alias="MUSL">
+        <ID>Microsoft.Unix.ShellCommand.Library</ID>
+        <Version>10.19.1158.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="System">
+        <ID>System.Library</ID>
+        <Version>7.5.8501.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="MUL">
+        <ID>Microsoft.Unix.Library</ID>
+        <Version>10.19.1158.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="Health">
+        <ID>System.Health.Library</ID>
+        <Version>7.0.8443.6</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+    </References>
+  </Manifest>
+  <Monitoring>
+    <Monitors>
+      <UnitMonitor ID="LUL.LastRebootCheckLinux.Unix.ShellCommand.Monitor" Accessibility="Public" Enabled="true" Target="MUL!Microsoft.Unix.Computer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="MUSL!Microsoft.Unix.ShellCommand.TwoState.MonitorType" ConfirmDelivery="false">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="LUL.LastRebootCheckLinux.Unix.ShellCommand.Monitor.AlertMessage">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Information</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Target/Property[Type="MUL!Microsoft.Unix.Computer"]/PrincipalName$</AlertParameter1>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="StatusOK" MonitorTypeStateID="StatusOK" HealthState="Success" />
+          <OperationalState ID="StatusError" MonitorTypeStateID="StatusError" HealthState="Warning" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>2160000</Interval>
+          <SyncTime />
+          <TargetSystem>$Target/Property[Type="MUL!Microsoft.Unix.Computer"]/NetworkName$</TargetSystem>
+          <UserName>$RunAs[Name="MUL!Microsoft.Unix.ActionAccount"]/UserName$</UserName>
+          <Password>$RunAs[Name="MUL!Microsoft.Unix.ActionAccount"]/Password$</Password>
+          <ShellCommand>current_time=$(date +%s); uptime_start_time=$(date -d "$(uptime -s)" +%s); uptime_in_days=$(( (current_time - uptime_start_time) / 86400 ));echo $uptime_in_days;</ShellCommand>
+          <TimeOut>120</TimeOut>
+          <TimeOutInMS>120000</TimeOutInMS>
+          <HealthyExpression>
+            <And>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="Integer">//*[local-name()="StdOut"]</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Less</Operator>
+                  <ValueExpression>
+                    <Value Type="Integer">6</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="Integer">//*[local-name()="ReturnCode"]</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="Integer">0</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+            </And>
+          </HealthyExpression>
+          <ErrorExpression>
+            <And>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="Integer">//*[local-name()="StdOut"]</XPathQuery>
+                  </ValueExpression>
+                  <Operator>GreaterEqual</Operator>
+                  <ValueExpression>
+                    <Value Type="Integer">6</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="Integer">//*[local-name()="ReturnCode"]</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="Integer">1</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+            </And>
+          </ErrorExpression>
+        </Configuration>
+      </UnitMonitor>
+    </Monitors>
+    <Overrides>
+      <MonitorPropertyOverride ID="Alias2d3222d951634bafa4f496834de8cb5dOverrideForMonitorLULLastRebootCheckLinuxUnixShellCommandMonitorForContextMicrosoftUnixComputer" Context="MUL!Microsoft.Unix.Computer" Enforced="false" Monitor="LUL.LastRebootCheckLinux.Unix.ShellCommand.Monitor" Property="Enabled">
+        <Value>true</Value>
+      </MonitorPropertyOverride>
+      <MonitorConfigurationOverride ID="Aliasf5706169e27549cc83d82c8d3c1cfaedOverrideForMonitorLULLastRebootCheckLinuxUnixShellCommandMonitorForContextMicrosoftUnixComputer" Context="MUL!Microsoft.Unix.Computer" Enforced="false" Monitor="LUL.LastRebootCheckLinux.Unix.ShellCommand.Monitor" Parameter="Interval">
+        <Value>2160000</Value>
+      </MonitorConfigurationOverride>
+      <MonitorPropertyOverride ID="Alias4d63de00974742d6af1ef215317057e6OverrideForMonitorLULLastRebootCheckLinuxUnixShellCommandMonitorForContextMicrosoftUnixComputer" Context="MUL!Microsoft.Unix.Computer" Enforced="false" Monitor="LUL.LastRebootCheckLinux.Unix.ShellCommand.Monitor" Property="AlertSeverity">
+        <Value>Information</Value>
+      </MonitorPropertyOverride>
+    </Overrides>
+  </Monitoring>
+  <Presentation>
+    <StringResources>
+      <StringResource ID="LUL.LastRebootCheckLinux.Unix.ShellCommand.Monitor.AlertMessage" />
+    </StringResources>
+  </Presentation>
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+        <DisplayString ElementID="LUL.LastRebootCheckLinux.Unix.ShellCommand.Monitor">
+          <Name>LUL LastRebootCheckLinux Unix ShellCommand Monitor</Name>
+          <Description />
+        </DisplayString>
+        <DisplayString ElementID="LUL.LastRebootCheckLinux.Unix.ShellCommand.Monitor" SubElementID="StatusError">
+          <Name>StatusError</Name>
+        </DisplayString>
+        <DisplayString ElementID="LUL.LastRebootCheckLinux.Unix.ShellCommand.Monitor" SubElementID="StatusOK">
+          <Name>StatusOK</Name>
+        </DisplayString>
+        <DisplayString ElementID="LUL.LastRebootCheckLinux.Unix.ShellCommand.Monitor.AlertMessage">
+          <Name>LUL LastRebootCheckLinux Monitor: Computer hasn't rebooted over threshold</Name>
+          <Description>Server: {0}
+						Message: Server has not rebooted in $(XPathQuery Type="Integer"&gt;//*[local-name()="StdOut"]) days.
+						LUL LastRebootCheckLinux Monitor - result: </Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="SVE" IsDefault="false">
+      <DisplayStrings>
+        <DisplayString ElementID="LUL.LastRebootCheckLinux.Unix.ShellCommand.Monitor" SubElementID="StatusError">
+          <Name>StatusError</Name>
+        </DisplayString>
+        <DisplayString ElementID="LUL.LastRebootCheckLinux.Unix.ShellCommand.Monitor" SubElementID="StatusOK">
+          <Name>StatusOK</Name>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPack>
